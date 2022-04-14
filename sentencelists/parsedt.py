@@ -3,7 +3,7 @@ import random
 
 # Dataset of 7.8 million sentences from Wikipedia by Mike Ortman https://www.kaggle.com/datasets/mikeortman/wikipedia-sentences
 
-file = open("dtlyrics.txt", "r")
+file = open("sentencelists/dtlyrics.txt", "r")
 lines = file.readlines()
 
 solutions = []

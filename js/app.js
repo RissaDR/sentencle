@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let guessesCorrect = 0;
 
     const sentencleDay = daysSinceSentencleStart(startDate, todayDate);
-    console.log(sentencleDay)
   
     const keys = document.querySelectorAll(".keyboard-row button");
 
