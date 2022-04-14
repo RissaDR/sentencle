@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Sentencle</title>
 
-    <script src="sentenceslist.js"></script>
-    <script src="app.js"></script>
+    <script src="sentencelists/sentencesdt.js"></script>
+    <script src="js/app.js"></script>
     
 
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -26,17 +26,22 @@
 
       <div id="game">
         <header>
-          <i class="far fa-question-circle" id="help"></i>
+          <div id="help"><i class="far fa-question-circle" id="ficon"></i></div>
           <h1 class="title">SENTENCLE</h1>
-          <i class="fas fa-chart-pie" id="stats"></i>
+          <div id="stats"><i class="fas fa-chart-pie" id="ficon"></i></div>
         </header>
         <div class="popup" id="failmessage">Not enough letters!</div> 
         <div id="board-container">
           
           <div id="board"></div>
         </div>
-
+        
         <div id="keyboard-container">
+          <div class="share" id="share"><i class="fas fa-share-alt" id="shareicon"></i>
+            Share your results!
+          </div> 
+          <div class="spacer-half"></div>
+          <div class="spacer-half"></div>
           <div class="keyboard-row">
             <button data-key="q">q</button>
             <button data-key="w">w</button>
@@ -73,6 +78,62 @@
             <button data-key="m">m</button>
             <button data-key="del" class="wide-button">Del</button>
           </div>
+        </div>
+      </div>
+
+      <div id="help-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close" id="close-help">&times;</span>
+
+          <p>Love <b>WORDLE</b> derivatives but need a litte bit of a challenge?</p><br>
+
+          <p>Try and see if you can guess the <b>SENTENCLE</b> in one try!</p><br>
+
+          <p>
+            Each row is a word in the sentence. Hit the enter button to
+            submit.
+          </p><br>
+
+          <p>
+            After each guess, the colour of the tiles will change to show how
+            close your guess was to the sentence.
+          </p><br>
+          
+          <div id="helprow">
+          <div class="helpsquare" id="helpsquares0">S</div>
+          <div class="helpsquare" id="helpsquares1">E</div>
+          <div class="helpsquare" id="helpsquares2">N</div>
+          <div class="helpsquare" id="helpsquares3">T</div>
+          <div class="helpsquare" id="helpsquares4">E</div>
+          <div class="helpsquare" id="helpsquares5">N</div>
+          <div class="helpsquare" id="helpsquares6">C</div>
+          <div class="helpsquare" id="helpsquares7">L</div>
+          <div class="helpsquare" id="helpsquares8">E</div>
+        </div>
+        <br>
+          <p>A new <b>SENTENCLE</b> will be available each day!</p>
+          <br>
+          <center><p style="color: #5da1fd;">1.0v — Adapted by Alicia 💙</p></center>
+        </div>
+      </div>
+
+      <div id="stats-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close" id="close-stats">&times;</span>
+
+          <h2>STATISTICS</h2>
+          <br>
+          <h3><strong>Total</strong>: <span id="total-played"></span></h3>
+
+          <h3><strong>Wins</strong>: <span id="total-wins"></span></h3>
+
+          <h3><strong>Win %</strong>: <span id="win-pct"></span></h3>
+
+          <h3>
+            <strong>Current Streak</strong>: <span id="current-streak"></span>
+          </h3>
         </div>
       </div>
     </div>
